@@ -9,7 +9,7 @@ export default function NotFound() {
         <h1 className="mb-4 text-9xl font-bold font-mono text-orbit-2">404</h1>
         <h2 className="mb-2 text-step-2 font-bold">Lost in space</h2>
         <p className="text-muted">
-          This page has drifted out of orbit. Let's get you back on track.
+          This page has drifted out of orbit. Let&apos;s get you back on track.
         </p>
       </div>
 

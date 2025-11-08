@@ -19,9 +19,9 @@ export default function PrivacyPage() {
 
           <h2>Introduction</h2>
           <p>
-            DevOrbit ("we", "our", or "us") is committed to protecting your
-            privacy. This Privacy Policy explains how we collect, use, and
-            safeguard your information.
+            DevOrbit (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) is
+            committed to protecting your privacy. This Privacy Policy explains
+            how we collect, use, and safeguard your information.
           </p>
 
           <h2>Information We Collect</h2>

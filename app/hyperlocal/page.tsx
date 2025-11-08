@@ -34,8 +34,8 @@ export default function HyperlocalPage() {
               <p className="font-semibold text-warning">Sworn Mode Privacy</p>
               <p className="mt-1 text-muted">
                 Sworn Mode shares an approximate location for 30 minutes. Your
-                exact location is fuzzed to ~200m. You're in control. Toggle
-                anytime.
+                exact location is fuzzed to ~200m. You&apos;re in control.
+                Toggle anytime.
               </p>
             </div>
           </div>
@@ -44,9 +44,7 @@ export default function HyperlocalPage() {
         {!swornMode ? (
           <div className="flex flex-col items-center justify-center rounded-xl border border-dashed border-outline p-12 text-center">
             <MapPin className="mb-4 h-12 w-12 text-muted" />
-            <h2 className="mb-2 text-xl font-semibold">
-              Enable Sworn Mode
-            </h2>
+            <h2 className="mb-2 text-xl font-semibold">Enable Sworn Mode</h2>
             <p className="mb-6 max-w-md text-muted">
               Activate Sworn Mode to see nearby developers and let others
               discover you. Your privacy is protected with location fuzzing.

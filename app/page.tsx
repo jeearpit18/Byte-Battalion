@@ -129,7 +129,7 @@ export default function HomePage() {
 
         {/* Orbital Navigation */}
         {!simpleNav && (
-          <div className="orbit-container absolute inset-0">
+          <div className="orbit-container absolute inset-0 z-0">
             <OrbitalNav planets={planets} />
           </div>
         )}

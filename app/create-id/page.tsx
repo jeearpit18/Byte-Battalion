@@ -20,7 +20,10 @@ const schema = z.object({
   handle: z
     .string()
     .min(3, 'Handle must be at least 3 characters')
-    .regex(/^[a-z0-9-]+$/, 'Handle can only contain lowercase letters, numbers, and hyphens'),
+    .regex(
+      /^[a-z0-9-]+$/,
+      'Handle can only contain lowercase letters, numbers, and hyphens'
+    ),
   email: z.string().email('Invalid email address'),
 });
 
@@ -31,7 +34,6 @@ export default function CreateIdPage() {
   const { toast } = useToast();
   const setUser = useAppStore((s) => s.setUser);
   const addUser = useAppStore((s) => s.addUser);
-  const [previewData, setPreviewData] = useState<FormData | null>(null);
 
   const {
     register,
@@ -148,8 +150,10 @@ export default function CreateIdPage() {
                   Quick Tips
                 </p>
                 <ul className="space-y-1 text-sm text-muted">
-                  <li>• Link your GitHub now to auto-pull highlights (optional)</li>
-                  <li>• You control what's public — always</li>
+                  <li>
+                    • Link your GitHub now to auto-pull highlights (optional)
+                  </li>
+                  <li>• You control what&apos;s public — always</li>
                   <li>• Your Dev ID is permanent and verifiable</li>
                 </ul>
               </div>
