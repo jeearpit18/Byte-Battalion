@@ -2,7 +2,6 @@
 
 import { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { gsap } from 'gsap';
 import Link from 'next/link';
 import {
   Tooltip,
@@ -79,11 +78,12 @@ export function OrbitalNav({ planets }: OrbitalNavProps) {
         // Draw orbit path
         ctx.beginPath();
         ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
-        ctx.strokeStyle = hoveredPlanet === planet.id
-          ? getComputedStyle(document.documentElement).getPropertyValue(
-              planet.colorVar
-            )
-          : 'rgba(255, 255, 255, 0.1)';
+        ctx.strokeStyle =
+          hoveredPlanet === planet.id
+            ? getComputedStyle(document.documentElement).getPropertyValue(
+                planet.colorVar
+              )
+            : 'rgba(255, 255, 255, 0.1)';
         ctx.lineWidth = hoveredPlanet === planet.id ? 2 : 1;
         ctx.stroke();
 
@@ -121,11 +121,7 @@ export function OrbitalNav({ planets }: OrbitalNavProps) {
 
   return (
     <div ref={containerRef} className="relative h-full w-full">
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0"
-        aria-hidden="true"
-      />
+      <canvas ref={canvasRef} className="absolute inset-0" aria-hidden="true" />
 
       {/* Accessible overlay with clickable planets */}
       <div className="absolute inset-0 flex items-center justify-center">
@@ -137,8 +133,12 @@ export function OrbitalNav({ planets }: OrbitalNavProps) {
           {planets.map((planet, i) => {
             const angle = (i * 360) / planets.length;
             const radius = 200;
-            const x = Math.round(Math.cos((angle * Math.PI) / 180) * radius * 100) / 100;
-            const y = Math.round(Math.sin((angle * Math.PI) / 180) * radius * 100) / 100;
+            const x =
+              Math.round(Math.cos((angle * Math.PI) / 180) * radius * 100) /
+              100;
+            const y =
+              Math.round(Math.sin((angle * Math.PI) / 180) * radius * 100) /
+              100;
 
             return (
               <Tooltip key={planet.id}>
