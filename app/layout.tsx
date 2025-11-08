@@ -4,6 +4,7 @@ import './globals.css';
 import { Providers } from '@/components/Providers';
 import { Toaster } from '@/components/ui/toaster';
 import { SearchCommand } from '@/components/SearchCommand';
+import { LayoutWrapper } from '@/components/LayoutWrapper';
 import { generateSEO } from '@/lib/seo';
 
 const inter = Inter({
@@ -47,7 +48,9 @@ export default function RootLayout({
         </a>
         <Providers>
           <SearchCommand />
-          <main id="main-content">{children}</main>
+          <LayoutWrapper>
+            <main id="main-content">{children}</main>
+          </LayoutWrapper>
           <Toaster />
         </Providers>
       </body>
